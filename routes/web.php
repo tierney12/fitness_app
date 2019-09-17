@@ -14,3 +14,32 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('exercises', 'ExerciseController');
+
+Route::resource('routines', 'RoutineController');
+
+Route::resource('userFriends', 'UserFriendController');
+
+Route::resource('userRequests', 'UserRequestController');
+
+Route::resource('exerciseUsers', 'ExerciseUserController');
+
+Route::resource('routineUsers', 'RoutineUserController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::resource('users', 'UserController');
+
+Route::resource('routineUsers', 'RoutineUserController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('verifyUsers', 'VerifyUserController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
