@@ -16,10 +16,10 @@ class CreateRoutinesUsersTable extends Migration
         Schema::create('routines_users', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->unsignedInteger('user');
+            $table->unsignedInteger('user_id');
             $table->foreign('user')->references('id')->on('users');
 
-            $table->unsignedInteger('routine');
+            $table->unsignedInteger('routine_id');
             $table->foreign('routine')->references('id')->on('routines');
 
             $table->unsignedInteger('created_by')->nullable();

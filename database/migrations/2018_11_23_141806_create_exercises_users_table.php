@@ -28,6 +28,8 @@ class CreateExercisesUsersTable extends Migration
             $table->unsignedInteger('updated_by')->nullable();
             $table->foreign('updated_by')->references('id')->on('users');
 
+            $table->integer('number');
+
             $table->timestamps();
 
             $table->softDeletes();
